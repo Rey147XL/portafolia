@@ -1,4 +1,4 @@
-<?php
+<?php                                       
 
     use PHPMailer\PHPMailer\PHPMailer;
     use PHPMailer\PHPMailer\Exception;
@@ -15,10 +15,7 @@
         $email = $_POST["email"];
         $mensaje = $_POST["message"];
 
-        $body = "Nombre: " . $nombre . 
-                "<br>Asunto: " . $asunto . 
-                "<br>Correo: " . $email . 
-                "<br>Mensaje: " . $mensaje;
+        
 
         try {
             $mail->SMTPDebug = 0;
@@ -32,7 +29,7 @@
             $mail->setFrom('yuiko1590wey@gmail.com', 'Reynaldo Cahuana');
             $mail->addAddress($email);
             $mail->isHTML(true);
-            $mail->Subject = 'Correo de prueba';
+            $mail->Subject = 'Correo electronico';
             $mail->Body    = $body;
             $mail->Charset = 'UTF-8';
             $mail->send();
@@ -45,7 +42,7 @@
 ?>
 
     <div class="container__form">
-        <form class="form" action="<?php echo htmlentities($_SERVER['PHP_SELF']); ?>" method="POST">
+        <form class="form">
             <label class="form__label">Nombre</label>
             <input class="form__input" type="text" name="user" placeholder="Nombre">
             
