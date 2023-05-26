@@ -32,7 +32,11 @@
 .fa-database{
     color: #666;
 }
+#map{
 
+    width: 10rem;
+    height: 10rem;
+}
 
 @media only screen and (min-width: 620px) {
     .home__parrafos{
